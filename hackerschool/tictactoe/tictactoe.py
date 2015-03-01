@@ -35,9 +35,8 @@ o_picks = []
 
 # check whether a player has played 3 or more turns
 # if so, check if the player has 3 colinear points
-def check_winner(turn):
-	global player
-	print "Running check_winner function"
+def check_winner(turn, player, board):
+	print "Running check_winner function for player %s" % player
 	if turn >= 4:
 		'''Check if player x has tictactoe.
 		If yes, stop game she wins. if no, allow player O 
@@ -50,7 +49,7 @@ def check_winner(turn):
 		for trios in itertools.combinations(picks, 3):
 			if colinear(trios) == True:
 				#print 'Player X, you have TicTacToe! You win.'
-				sys.exit('Player ' + player + ', you have TicTacToe! You win.')
+				sys.exit('Player ' + player + ', you have TicTacToe! You win.\n'+ board)
 			else:
 				print 'Not yet, Player '+ player +', keep Playing'
 		
@@ -60,15 +59,14 @@ def check_winner(turn):
 	else:
 		return
 
-def switch_player():
-	global player
+def switch_player(player):
 	print "Running switch_player function"
 	if player == 'X':
 		player = 'O'
 	else:
 		player = 'X'
-	print player
-	return
+	#print player
+	return player
 
 def colinear(trios):
 	print "Running colinear function"
@@ -78,9 +76,8 @@ def colinear(trios):
 	slopediff = x2*y1 - x1*y2
 	return abs(x2*y1 - x1*y2) < 1e-12
 
-def play():
+def play(player, board):
 	print "Running play function"
-	global board, player
 	prompt = '''
 	Player %s, your turn. 
 	Pick a space number to draw an %s .\n 
@@ -106,8 +103,8 @@ def play():
 	options.remove(pick)
 	
 	board = "%s" % player.join(board.split(pick))
-	print board
-	
+	#print board
+	return board
 
 # Main part of program
 # Allow each player a turn choose a space to draw X or O 
@@ -115,8 +112,8 @@ def play():
 player = 'X'
 
 for turn in range(9):
-	print "Turn is %s" % turn
-	play()
-	check_winner(turn)
-	switch_player()
+	print "Turn is %s and player is %s" % (turn, player)
+	board = play(player, board)
+	check_winner(turn, player, board)
+	player = switch_player(player)
 
