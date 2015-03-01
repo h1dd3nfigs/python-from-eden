@@ -4,7 +4,7 @@ import itertools
 
 # Draw a game board with space numbers where players will place X or O
 board = '''
-\t TicTacToe\n
+\t Tic Tac Toe\n
 \t 7 | 8 | 9
 \t -- --- --
 \t 4 | 5 | 6
@@ -40,8 +40,8 @@ def check_winner(turn, player, board):
 
 		for trios in itertools.combinations(picks, 3):
 			if colinear(trios) == True:
-				sys.exit('Player ' + player + 
-					', you have TicTacToe! You win.\n'+ board)
+				sys.exit('\n***** Player ' + player + 
+					', you have TicTacToe! You win. *****\n'+ board)
 			#else:
 			#	print 'Not yet, Player '+ player +', keep Playing'	
 		
@@ -78,7 +78,7 @@ def play(player, board):
 	prompt = '''
 	Player %s, it's your turn. 
 	Type the space number where you'd like to draw an %s .\n 
-	%s \n''' % (player, player, board)
+	%s \n\t >> ''' % (player, player, board)
 	# print '''%s \nYour options are %r \n''' % (board, options)
 	
 	pick = raw_input(prompt)
