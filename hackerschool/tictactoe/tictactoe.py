@@ -48,7 +48,8 @@ def check_winner(turn, player, board):
 		# If all spaces on the game board are filled with Xs and Os 
 		# and neither player had any colinear combos of 3 points, game's over	
 		if len(options) < 1:
-			sys.exit('Game over and it\'s a tie. Let\'s play again!')
+			sys.exit('\n***** Game over and it\'s a tie.'+
+				' Let\'s play again! ******\n'+ board)
 	else:
 		return
 
@@ -77,7 +78,7 @@ def play(player, board):
 	#print "Running play function"
 	prompt = '''
 	Player %s, it's your turn. 
-	Type the space number where you'd like to draw an %s .\n 
+	Type the space number where you'd like to draw an %s, then press ENTER.\n 
 	%s \n\t >> ''' % (player, player, board)
 	# print '''%s \nYour options are %r \n''' % (board, options)
 	
