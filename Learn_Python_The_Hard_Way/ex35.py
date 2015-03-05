@@ -4,11 +4,35 @@ def gold_room():
 	print "This room is full of gold. How much do you take?"
 
 	choice = raw_input("> ")
-	if "0" in choice or "1" in choice:
-		how_much = int(choice)
-	else: 
-		dead("Man, learn to type a number.")
+	
+	# Option 1 (Zed's original options)
+	# replaced if statement below with string.isdigit() function
+	# in case user wants to enter a number that doesn't contain
+	# the digit 0 or 1 or wants to type a float data type
+	# if "0" in choice or "1" in choice:
+	#	how_much = int(choice)
+	
+	# Option 2: use isinstance(object, class)
+	# if the raw_input can be converted to an int, then do so
+	# and compare this int to 50
+	# problem with this option is that non-integer inputs cause 
+	# the program to throw a ValueError because choice cannot be converted
+	# to an integer
 
+	# if isinstance(int(choice), int) == True:
+	# 	how_much = int(choice)
+	# else:
+	#	dead()
+
+	# Option 3: use str.isdigit() which will return false if 
+	# str contains anything other than numeric characters, incl
+	# a negative sign, comma or decimal point :-/
+	
+	if choice.isdigit() == False:
+		dead("Man, learn to type a number.")
+	else: 
+		how_much = int(choice)
+		
 	if how_much < 50:
 		print "Nice, you're not greedy, you win!"
 		exit(0)
@@ -18,7 +42,7 @@ def gold_room():
 def bear_room():
 	print "There is a bear here."
 	print "The bear has a bunch of honey."
-	print "The fat bear is in front of antoher door."
+	print "The fat bear is in front of another door."
 	print "How are you going to move the bear?"
 	bear_moved = False
 
