@@ -42,7 +42,8 @@ def check_winner(turn, player, board):
 			if colinear(trios) == True:
 				sys.exit('\n***** Player ' + player + 
 					', you have TicTacToe! You win. *****\n'+ board)
-			#else:
+			else:
+				pass
 			#	print 'Not yet, Player '+ player +', keep Playing'	
 		
 		# If all spaces on the game board are filled with Xs and Os 
@@ -50,8 +51,10 @@ def check_winner(turn, player, board):
 		if len(options) < 1:
 			sys.exit('\n***** Game over and it\'s a tie.'+
 				' Let\'s play again! ******\n'+ board)
+		else:
+			pass
 	else:
-		return
+		pass
 
 def switch_player(player):
 	#print "Running switch_player function"
