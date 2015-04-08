@@ -1,0 +1,95 @@
+"""
+Misadventures of a Confused TWA Natural
+
+You just got invited on a date this Saturday with a hot guy. Yay! 
+He prefers girls with long silky hair. Up until yesterday, that would've 
+been fine by you, considering your waist-length locks, part of what 
+attracted him to you in the first place. However, you had been 
+transitioning for the past 6 months. Last night, as you lamented the 
+struggles of managing 2 textures, India Arie's 'I am not my hair' 
+came on the radio and you got the bright idea to chop off all your hair.
+You're now working with a 3-inch TWA and pending date in 48 hours. 
+How do you respond to his invite?
+"""
+
+"""
+1) Decline invite
+	Exit : Panic and never say anything to him ever again. While you're at it, also
+	unfriend him on Facebook and unfollow him on IG, Twitter & Snapchat. Better safe then sorry.
+2) Accept invite
+	Prompt money: What's your budget for looking good?
+	Prompt time: How many hours are you willing to invest stying your hair?
+		
+		A) if HIGH money, HIGH time: Salon - African Braiding
+			Tension decision: Fatou, a Senegalese stylist, assumes that you like her prior
+			customers prefer her tight braiding method. She draws a part and grabs your strands
+			to form a braid. You feel the individual hairs being ripped from your scalp. 
+			What do you do?
+			
+			i) Accept
+			Exit : She finishes the style. You look nice on your date (though a bit alien-like) 
+			because your hairline looks like you have braids sprouting directly from your scalp. 
+			A month into dating him, you're having a steamy makeout session and during the close-eyed
+			lip-locking he runs his hands through the back of your head. A braid slips out into hand 
+			with your strands attached (bulb & all). He's freaked out and runs away. 
+			You never hear from him again.
+
+			ii) Refuse
+				Prompt: You run out of the salon. Do you wanna try another salon or just DIY at home?
+				1) Salon - Dominican
+				2) Home - Crochet Braids
+
+			iii) Reason with her
+				While loop with a countdown. 
+				She says okay and promises to loosen her braiding grip. Then she finishes her tight braid, 
+				grabs a comb, draws another part and proceeds to rip your hair out with this next braid. 
+				1 braid down. 1,244 to go. Take you back to beginning of tension decision while loop.
+				If we get to 0 to go, then route game to the i) Accept option where she finishes & Exit ...
+
+		B) if HIGH money, LOW time: Salon - Dominican
+			Heat decision: Maria, Dominican stylist, sews a few tracks around your head for length & volume.
+			She leaves out your edges and U-part section of your crown for a natural effect. Because you're 
+			unrelaxed, she's gotta heat-straighten to blend with your silky, bone-straight weave. 
+			Can she keep passing the hot iron on your hair until it matches?
+
+			i) Accept
+			While loop with a countdown. 
+			She spritzes some heat protectant spray and smoothes on an alcohol-rich, edge control.
+			Then she runs the sections of your leave-out between the hot plates. Still not straight enough to match.
+			Take you back to the beginning of heat decision while loop. If we get to 7x in this accept sub-loop, 
+			then route the game to ii) Refuse option where you walk out & exit...
+
+			ii) Refuse
+			Exit: Walk out wearing a headband over your leave-out. Date goes okay but you're self-conscious about your 
+			look and even moreso when he asks why you're wearing a sweatband outside of the gym? :-/
+
+		C) if LOW money, HIGH time: Home - Crochet Braids
+			Fatigue decision: Your hands are getting tired having to manipulate that Kanekelon 
+			to make it to look less like plastic. Do you accept the challenge of pushing through despite your intense 
+			finger and wrist pain and keep styling?
+			
+			i) Accept
+			While loop with a countdown. After 3 runs through this while loop with you accepting the pain, 
+			your hands fall off and you're now stuck with an almost cute style but no hands. 
+				Prompt: Do you have an iPhone or Droid cell phone?
+				1) Exit - iPhone: Hey Siri! saves the day. You can use voice-to-text to let him know 
+					you can't make tomorrow's date because you're on your way to the ER now to see if 
+					they can re-attach your hands. Hopefully you can get a rain check
+					for a few months from now when you've completed physical therapy and will be ready 
+					to take him up on that date offer. 
+				2) Exit - Droid: No Siri so you're a no-call-no-show. No prospective boyfriend and also no hands. Welp!
+			
+			ii) Refuse
+			Go back to BSS and buy a wig to do the Home - Wig option
+
+		D) if LOW money, LOW time: Home - Wig
+		Prompt: So many styles to choose from at the MegaWig Beauty Supply Store. Torn between lace wigs held on 
+		by adhesive versus those using elastic bands, you opt for one with adhesive. Crust builds up on your hairline and when he tries to help you out by flicking at the tiny, crystal chunk on your hairline, the chunk breaks off and the wig falls back onto your chair. How does he react?
+				1) Helps you
+				Route game back to original Accept Invite but not gussied up option. exit 
+
+				2) Teases you
+				Exit: Kill him for hurting your feelings and then become a fugitive on the run for the rest of your life
+
+			\
+"""
